@@ -1,6 +1,6 @@
 {
   "name": "dmm-parser",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Parser for latitude and longitude in DMM format",
   "main": "src",
   "scripts": {

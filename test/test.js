@@ -41,6 +41,11 @@ describe('dmm', () => {
       const data = dmm.latToDmm(raw, 5);
       expect(data).to.eql('4212.55809,N');
     });
+    it('should return latitude 4212.55809,N', () => {
+      const raw = 42.2093015;
+      const data = dmm.latToDmm(raw);
+      expect(data).to.eql('4212.55809,N');
+    });
   });
 
   describe('lngToDmm', () => {

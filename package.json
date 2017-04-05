@@ -23,7 +23,7 @@
     "nmea",
     "parser",
     "dmm",
-    "coodinates"
+    "coordinates"
   ],
   "author": "Leonardo Gatica <lgatica@protonmail.com> (https://about.me/lgatica)",
   "license": "MIT",

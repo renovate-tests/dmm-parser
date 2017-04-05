@@ -2,6 +2,23 @@
 
 const pad = require('pad');
 
+const degToDmm = (raw, fixed, type) => {
+  fixed = fixed || 5;
+  let degPad, signs;
+  if (type === 'lat') {
+    degPad = 2;
+    signs = ['S', 'N'];
+  } else {
+    degPad = 3;
+    signs = ['W', 'E'];
+  }
+  const tmp = raw.toString().split('.');
+  const deg = pad(degPad, Math.abs(tmp[0]), '0');
+  const mim = pad(7, (('0.' + (tmp[1] || 0)) * 60).toFixed(fixed), '0');
+  const sign = raw < 0 ? signs[0] : signs[1];
+  return `${deg}${mim},${sign}`;
+};
+
 /**
  * Decimal latitude to degree [dmm]
  *
@@ -9,14 +26,7 @@ const pad = require('pad');
  * @param {number} fixed - decimal fixed
  * @return {string} degree [dmm]
  */
-const latToDmm = (raw, fixed) => {
-  fixed = fixed || 5;
-  const tmp = raw.toString().split('.');
-  const deg = pad(2, Math.abs(tmp[0]), '0');
-  const mim = pad(7, (('0.' + (tmp[1] || 0)) * 60).toFixed(fixed), '0');
-  const sign = raw < 0 ? 'S' : 'N';
-  return `${deg}${mim},${sign}`;
-};
+const latToDmm = (raw, fixed) => degToDmm(raw, fixed, 'lat');
 
 /**
  * Decimal longitude to degree [dmm]
@@ -25,14 +35,7 @@ const latToDmm = (raw, fixed) => {
  * @param {number} fixed - decimal fixed
  * @return {string} degree [dmm]
  */
-const lngToDmm = (raw, fixed) => {
-  fixed = fixed || 5;
-  const tmp = raw.toString().split('.');
-  const deg = pad(3, Math.abs(tmp[0]), '0');
-  const mim = pad(7, (('0.' + (tmp[1] || 0)) * 60).toFixed(fixed), '0');
-  const sign = raw < 0 ? 'W' : 'E';
-  return `${deg}${mim},${sign}`;
-};
+const lngToDmm = (raw, fixed) => degToDmm(raw, fixed, 'lng');
 
 /**
  * Degree [dmm] to decimal

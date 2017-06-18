@@ -1,3 +1,13 @@
+#### 0.0.3 (2017-6-18)
+
+##### Chores
+
+* **package:**
+  * update dependencies ([ef835962](https://github.com/lgaticaq/dmm-parser/commit/ef835962c2225eadaa2ce41d714a70a08563a261))
+  * update eslint to version 4.0.0 ([e51fe1f1](https://github.com/lgaticaq/dmm-parser/commit/e51fe1f17dcec25e527240e1aea2a65619728b60))
+  * update codeclimate-test-reporter to version 0.5.0 ([2fed8f7d](https://github.com/lgaticaq/dmm-parser/commit/2fed8f7d0b2a00a82d310bb9830a84a70b5d866d))
+  * update chai to version 4.0.0 ([c6d12a6f](https://github.com/lgaticaq/dmm-parser/commit/c6d12a6f9b2b97fbe0ede49118a4c94f8c5379e4))
+
 #### 0.0.2 (2017-4-5)
 
 ##### Chores

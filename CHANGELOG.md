@@ -1,3 +1,23 @@
+# [1.0.0](https://github.com/Drivetech/dmm-parser/compare/v0.0.3...v1.0.0) (2019-01-04)
+
+
+### Bug Fixes
+
+* **deps:** update dependency pad to v^2.0.0 ([47e8fb6](https://github.com/Drivetech/dmm-parser/commit/47e8fb6))
+* **package:** fix lint-staged config ([b0d87d5](https://github.com/Drivetech/dmm-parser/commit/b0d87d5))
+
+
+### Features
+
+* **deps:** remove pad ([3736953](https://github.com/Drivetech/dmm-parser/commit/3736953))
+* **node:** set min node version to v10 ([1dfe211](https://github.com/Drivetech/dmm-parser/commit/1dfe211))
+
+
+### BREAKING CHANGES
+
+* **deps:** Replace pad to String.prototype.padStart
+* **node:** se min node version to v10
+
 #### 0.0.3 (2017-6-18)
 
 ##### Chores
@@ -31,4 +51,3 @@
 * **linter:** Fix linter ([ceec46a5](https://github.com/Drivetech/dmm-parser/commit/ceec46a5ecc01ad492dbef53822bc58e080a7084))
 
 #### 0.0.1 (2016-7-24)
-

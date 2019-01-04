@@ -1,6 +1,6 @@
 {
   "name": "@drivetech/dmm-parser",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "Parser for latitude and longitude in DMM format",
   "main": "src",
   "scripts": {

@@ -2,7 +2,17 @@
 
 const pad = require('pad')
 
-const degToDmm = (raw, fixed, type) => {
+/**
+ * Convert from deg to dmm.
+ *
+ * @param {number} value - Degree in deg.
+ * @param {number} [fixed] - Number of digits to fix.
+ * @param {string} type - 'lat' or 'lng'.
+ * @returns {string} - Degree in dmm.
+ * @example
+ * const dmm = degToDmm(-33.361225, 4, 'lat')
+ */
+const degToDmm = (value, fixed, type) => {
   fixed = fixed || 5
   let degPad, signs
   if (type === 'lat') {
@@ -12,36 +22,45 @@ const degToDmm = (raw, fixed, type) => {
     degPad = 3
     signs = ['W', 'E']
   }
-  const tmp = raw.toString().split('.')
+  const tmp = value.toString().split('.')
   const deg = pad(degPad, Math.abs(tmp[0]), '0')
   const mim = pad(7, (('0.' + (tmp[1] || 0)) * 60).toFixed(fixed), '0')
-  const sign = raw < 0 ? signs[0] : signs[1]
+  const sign = value < 0 ? signs[0] : signs[1]
   return `${deg}${mim},${sign}`
 }
 
 /**
- * Decimal latitude to degree [dmm]
+ * Decimal latitude to degree [dmm].
  *
- * @param {number} raw - raw data
- * @param {number} fixed - decimal fixed
- * @return {string} degree [dmm]
+ * @param {number} lat - Latitude.
+ * @param {number} fixed - Decimal fixed.
+ * @returns {string} Degree [dmm].
+ * @example
+ * const { latToDmm } = require('dmm-parser')
+ * const dmm = latToDmm(-33.361225, 4) // '3321.6735,S'
  */
-const latToDmm = (raw, fixed) => degToDmm(raw, fixed, 'lat')
+const latToDmm = (lat, fixed) => degToDmm(lat, fixed, 'lat')
 
 /**
- * Decimal longitude to degree [dmm]
+ * Decimal longitude to degree [dmm].
  *
- * @param {number} raw - raw data
- * @param {number} fixed - decimal fixed
- * @return {string} degree [dmm]
+ * @param {number} lng - Longitude.
+ * @param {number} fixed - Decimal fixed.
+ * @returns {string} Degree [dmm].
+ * @example
+ * const { lngToDmm } = require('dmm-parser')
+ * const dmm = dmm.lngToDmm(-70.51273333333333, 4) // '07030.7640,W'
  */
-const lngToDmm = (raw, fixed) => degToDmm(raw, fixed, 'lng')
+const lngToDmm = (lng, fixed) => degToDmm(lng, fixed, 'lng')
 
 /**
- * Degree [dmm] to decimal
+ * Degree [dmm] to decimal.
  *
- * @param {string} data - Degree in dmm.
- * @return {number} decimals
+ * @param {string} raw -  .
+ * @returns {number} Decimals.
+ * @example
+ * const { degToDec } = require('dmm-parser')
+ * const dec = degToDec('3321.6735,S') // -33.361225
  */
 const degToDec = raw => {
   let decimal = 0.0

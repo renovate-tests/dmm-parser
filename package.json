@@ -6,7 +6,6 @@
   "scripts": {
     "lint": "eslint .",
     "format": "prettier-standard 'src/**/*.js' 'test/**/*.js'",
-    "precommit": "lint-staged",
     "pretest": "npm run lint -s && npm run format -s",
     "test": "istanbul cover _mocha",
     "release:major": "changelog -M && git add CHANGELOG.md && git commit -m 'updated CHANGELOG.md' && npm version major && git push origin && git push origin --tags && npm publish",
@@ -66,17 +65,19 @@
       ]
     }
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
   "lint-staged": {
-    "src/**/*.js": [
-      "eslint --fix",
-      "prettier-standard",
-      "git add"
-    ],
-    "test/**/*.js": [
-      "eslint --fix",
-      "prettier-standard",
-      "git add"
-    ]
+    "linters": {
+      "{src,test}/**/*.js": [
+        "eslint --fix",
+        "prettier-standard",
+        "git add"
+      ]
+    }
   },
   "tonicExampleFilename": "example.js"
 }

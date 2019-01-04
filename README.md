@@ -1,7 +1,7 @@
 # @drivetech/dmm-parser
 
-[![npm version](https://img.shields.io/npm/v/@drivetech/dmm-parser.svg?style=flat-square)](https://www.npmjs.com/package/@drivetech/dmm-parser)
-[![npm downloads](https://img.shields.io/npm/dm/@drivetech/dmm-parser.svg?style=flat-square)](https://www.npmjs.com/package/@drivetech/dmm-parser)
+[![npm version](https://img.shields.io/npm/v/@drivetech/dmm-parser.svg)](https://www.npmjs.com/package/@drivetech/dmm-parser)
+[![npm downloads](https://img.shields.io/npm/dm/@drivetech/dmm-parser.svg)](https://www.npmjs.com/package/@drivetech/dmm-parser)
 [![Build Status](https://travis-ci.org/Drivetech/dmm-parser.svg?branch=master)](https://travis-ci.org/Drivetech/dmm-parser)
 [![Coverage Status](https://coveralls.io/repos/github/Drivetech/dmm-parser/badge.svg?branch=master)](https://coveralls.io/github/Drivetech/dmm-parser?branch=master)
 [![Maintainability](https://api.codeclimate.com/v1/badges/33c101fcae3f0aa81ad2/maintainability)](https://codeclimate.com/github/Drivetech/dmm-parser/maintainability)

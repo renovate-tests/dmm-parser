@@ -105,5 +105,11 @@
   },
   "publishConfig": {
     "access": "public"
+  },
+  "renovate": {
+    "automerge": "minor",
+    "extends": [
+      "config:js-lib"
+    ]
   }
 }

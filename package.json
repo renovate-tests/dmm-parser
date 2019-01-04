@@ -4,9 +4,8 @@
   "description": "Parser for latitude and longitude in DMM format",
   "main": "src",
   "scripts": {
-    "lint": "eslint .",
-    "format": "prettier-standard 'src/**/*.js' 'test/**/*.js'",
-    "pretest": "npm run lint -s && npm run format -s",
+    "lint": "eslint . --fix",
+    "format": "prettier-standard '{src,test}/**/*.js'",
     "commit": "commit",
     "test": "nyc mocha"
   },

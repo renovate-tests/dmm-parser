@@ -26,8 +26,8 @@ const dmm = require('dmm-parser');
 
 dmm.degToDec('3321.6735,S'); // -33.361225
 dmm.degToDec('07030.7640,W'); // -70.51273333333333
-dmm.degToDec(-33.361225, 4); // '3321.6735,S'
-dmm.degToDec(-70.51273333333333, 4); // '07030.7640,W'
+dmm.latToDmm(-33.361225, 4); // '3321.6735,S'
+dmm.lngToDmm(-70.51273333333333, 4); // '07030.7640,W'
 ```
 
 ## License

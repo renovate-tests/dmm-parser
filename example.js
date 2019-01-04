@@ -1,4 +1,4 @@
-const dmm = require('dmm-parser')
+const dmm = require('@drivetech/dmm-parser')
 
 const raw = [
   {type: 'dmm', raw: '3321.6735,S'},

@@ -36,7 +36,7 @@ const degToDmm = (value, fixed, type) => {
  * @param {number} fixed - Decimal fixed.
  * @returns {string} Degree [dmm].
  * @example
- * const { latToDmm } = require('dmm-parser')
+ * const { latToDmm } = require('@drivetech/dmm-parser')
  * const dmm = latToDmm(-33.361225, 4) // '3321.6735,S'
  */
 const latToDmm = (lat, fixed) => degToDmm(lat, fixed, 'lat')
@@ -48,7 +48,7 @@ const latToDmm = (lat, fixed) => degToDmm(lat, fixed, 'lat')
  * @param {number} fixed - Decimal fixed.
  * @returns {string} Degree [dmm].
  * @example
- * const { lngToDmm } = require('dmm-parser')
+ * const { lngToDmm } = require('@drivetech/dmm-parser')
  * const dmm = dmm.lngToDmm(-70.51273333333333, 4) // '07030.7640,W'
  */
 const lngToDmm = (lng, fixed) => degToDmm(lng, fixed, 'lng')
@@ -59,7 +59,7 @@ const lngToDmm = (lng, fixed) => degToDmm(lng, fixed, 'lng')
  * @param {string} raw -  .
  * @returns {number} Decimals.
  * @example
- * const { degToDec } = require('dmm-parser')
+ * const { degToDec } = require('@drivetech/dmm-parser')
  * const dec = degToDec('3321.6735,S') // -33.361225
  */
 const degToDec = raw => {

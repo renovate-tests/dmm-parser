@@ -1,5 +1,5 @@
 {
-  "name": "dmm-parser",
+  "name": "@drivetech/dmm-parser",
   "version": "0.0.3",
   "description": "Parser for latitude and longitude in DMM format",
   "main": "src",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lgaticaq/dmm-parser.git"
+    "url": "https://github.com/Drivetech/dmm-parser.git"
   },
   "keywords": [
     "nmea",
@@ -25,9 +25,9 @@
   "author": "Leonardo Gatica <lgatica@protonmail.com> (https://about.me/lgatica)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/lgaticaq/dmm-parser/issues"
+    "url": "https://github.com/Drivetech/dmm-parser/issues"
   },
-  "homepage": "https://github.com/lgaticaq/dmm-parser#readme",
+  "homepage": "https://github.com/Drivetech/dmm-parser#readme",
   "dependencies": {},
   "devDependencies": {
     "@commitlint/cli": "7.2.1",
@@ -102,5 +102,8 @@
   },
   "nyc": {
     "extends": "nyc-config-common"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }

@@ -1,7 +1,5 @@
 'use strict'
 
-const pad = require('pad')
-
 /**
  * Convert from deg to dmm.
  *
@@ -23,8 +21,10 @@ const degToDmm = (value, fixed, type) => {
     signs = ['W', 'E']
   }
   const tmp = value.toString().split('.')
-  const deg = pad(degPad, Math.abs(tmp[0]), '0')
-  const mim = pad(7, (('0.' + (tmp[1] || 0)) * 60).toFixed(fixed), '0')
+  const deg = Math.abs(tmp[0])
+    .toString()
+    .padStart(degPad, '0')
+  const mim = (('0.' + (tmp[1] || 0)) * 60).toFixed(fixed).padStart(7, '0')
   const sign = value < 0 ? signs[0] : signs[1]
   return `${deg}${mim},${sign}`
 }

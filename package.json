@@ -28,9 +28,7 @@
     "url": "https://github.com/lgaticaq/dmm-parser/issues"
   },
   "homepage": "https://github.com/lgaticaq/dmm-parser#readme",
-  "dependencies": {
-    "pad": "^2.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@commitlint/cli": "7.2.1",
     "@commitlint/config-conventional": "7.1.2",
@@ -101,5 +99,8 @@
   "tonicExampleFilename": "example.js",
   "release": {
     "extends": "npm-github-config"
+  },
+  "nyc": {
+    "extends": "nyc-config-common"
   }
 }
